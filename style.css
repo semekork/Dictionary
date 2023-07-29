@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 body {
-    background-color: #ae9cff;
+    background-image: url(Splash.jpg);
 }
 .container {
     background-color: #ffffff;
@@ -19,7 +19,25 @@ body {
     padding: 80px 50px;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+    animation: changeColor 2s infinite alternate;
 }
+@keyframes changeColor {
+    0% {
+      box-shadow: 0 4px 6px rgba(234, 8, 246, 0.665);
+    }
+    25% {
+        box-shadow: 1px 3px 10px 4px rgb(254, 131, 0);
+    }
+    50% {
+      box-shadow: 5px 5px 20px 3px rgba(6, 255, 226, 0.662);
+    }
+    75% {
+        box-shadow: 5px 5px 20px 3px rgba(6, 255, 39, 0.835);
+      }
+    100% {
+      box-shadow: 5px 6px 30px 5px rgb(39, 5, 174); 
+    }
+  }
 .search-box {
     width: 100%;
     display: flex;
@@ -30,17 +48,17 @@ body {
     width: 70%;
     border: none;
     outline: none;
-    border-bottom: 3px solid #ae9cff;
+    border-bottom: 3px solid #3c2893ad;
     font-size: 16px;
 }
 .search-box button {
     padding: 15px 0;
     width: 25%;
-    background-color: #ae9cff;
+    background-color: #2f00ff;
     border: none;
     outline: none;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .result {
     position: relative;
@@ -56,7 +74,7 @@ body {
 }
 .result button {
     background-color: transparent;
-    color: #ae9cff;
+    color: #372d64;
     border: none;
     outline: none;
     font-size: 18px;
@@ -64,7 +82,7 @@ body {
 .result .details {
     display: flex;
     gap: 10px;
-    color: #b3b6d4;
+    color: #121e9f;
     margin: 5px 0 20px 0;
     font-size: 14px;
 }
@@ -82,3 +100,17 @@ body {
     margin-top: 80px;
     text-align: center;
 }
+
+body #watermark {
+    position: fixed;
+    font-size: 8em;
+    font-weight: 700;
+    margin: 0 0 0 0;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.36);
+    z-index: 0;
+    text-align: left;
+    font-family: "proxima-nova", "Lato", sans-serif;
+  }
